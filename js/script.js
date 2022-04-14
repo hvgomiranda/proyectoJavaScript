@@ -9,6 +9,8 @@ let continuarCargaDeIngredientes = "s";
 let ingredienteCorrecto = "s";
 let recetas = [];
 
+let eleccion;
+
 class Receta
 {
     constructor(id, nombre, ingredientes)
@@ -19,58 +21,72 @@ class Receta
     }
 }
 
-for(let i=0; i<recetas.length; i++)
+function menu()
 {
-    console.log(recetas[i] + "\n");
+    let eleccion;
+
+    eleccion = prompt("1. Ingresar nueva receta\n2. Ver recetas\nElija una opcion: ");
+
+    eleccion = parseInt(eleccion);
+
+    return eleccion;
 }
 
 do
 {
-    id++;
-    idReceta = id;
+    eleccion = menu();
 
-    nombre = prompt("Escriba el nombre de la receta: ");
-    
+    switch(eleccion)
+    {
+        case 1:
+            agregarNuevaReceta();
+            break;
+        case 2:
+            mostrarRecetas();
+            break;
+        case 3:
+            console.log("Gracias por usar el programa");
+            break;
+        default:
+            console.log("Opcion incorrecta, vuelva a elegir");
+    }
+}while(eleccion!=3);
+
+function agregarNuevaReceta()
+{
     do
     {
-        ingrediente = prompt("Escriba el ingrediente para hacer la receta: ");
+        id++;
+        idReceta = id;
     
-        ingredientes.push(ingrediente);
+        nombre = prompt("Escriba el nombre de la receta: ");
+        
+        do
+        {
+            ingrediente = prompt("Escriba el ingrediente para hacer la receta: ");
+        
+            ingredientes.push(ingrediente);
+        
+            continuarCargaDeIngredientes = prompt("¿Desea seguir agregando ingredientes? (s/n)");
+        
+        }while(continuarCargaDeIngredientes !== "n");
     
-        continuarCargaDeIngredientes = prompt("¿Desea seguir agregando ingredientes? (s/n)");
+        nombreReceta = nombre;
     
-    }while(continuarCargaDeIngredientes !== "n");
+        nombreReceta = new Receta(idReceta, nombre, ingredientes);
+    
+        recetas.push(nombreReceta);
+    
+        continuar = prompt("¿Desea seguir agregando recetas? (s/n)");
+    
+    }while(continuar !== "n");
+}
 
-    nombreReceta = nombre;
-
-    nombreReceta = new Receta(idReceta, nombre, ingredientes);
-
-    recetas.push(nombreReceta);
-
-    continuar = prompt("¿Desea seguir agregando recetas? (s/n)");
-
-}while(continuar !== "n");
-
-
-/*ingredienteCorrecto = prompt("El ingrediente es " + ingrediente + ": ¿Estás seguro? (s/n)");
-ingredienteCorrecto = ingredienteCorrecto.toLowerCase();
-
-while(ingredienteCorrecto !== "s" && ingredienteCorrecto !== "si" && ingredienteCorrecto !== "sí" && ingredienteCorrecto !== "n" && ingredienteCorrecto !== "no")
+function mostrarRecetas()
 {
+    for(let i=0; i<recetas.length; i++)
     {
-        ingredienteCorrecto = prompt("Ingreso incorrecto, vuelva a ingresar (s/n): ");
+        console.log(recetas[i] + "\n");
     }
 }
 
-while(ingredienteCorrecto === "n" || ingredienteCorrecto === "no")
-{
-    ingrediente = prompt("Escriba el nuevo ingrediente a agregar a la lista: ");
-
-}
-
-ingredientes = ingredientes.push(ingrediente);
-
-for(let i=0; i<ingredientes.length; i++)
-{
-    console.log(ingredientes[i] + "\n");
-}*/
