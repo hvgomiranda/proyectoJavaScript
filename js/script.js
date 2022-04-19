@@ -8,6 +8,8 @@ let continuar = "s";
 let continuarCargaDeIngredientes = "s";
 let ingredienteCorrecto = "s";
 let recetas = [];
+let botonVerRecetas;
+let botonAgregarRecetas;
 
 let eleccion;
 
@@ -21,36 +23,12 @@ class Receta
     }
 }
 
-function menu()
-{
-    let eleccion;
+botonVerRecetas = document.getElementById("verRecetas");
+botonVerRecetas.addEventListener("click", mostrarRecetas);
 
-    eleccion = prompt("1. Ingresar nueva receta\n2. Ver recetas\nElija una opcion: ");
+botonAgregarRecetas = document.getElementById("agregarRecetas");
+botonAgregarRecetas.addEventListener("click", agregarNuevaReceta);
 
-    eleccion = parseInt(eleccion);
-
-    return eleccion;
-}
-
-do
-{
-    eleccion = menu();
-
-    switch(eleccion)
-    {
-        case 1:
-            agregarNuevaReceta();
-            break;
-        case 2:
-            mostrarRecetas();
-            break;
-        case 3:
-            console.log("Gracias por usar el programa");
-            break;
-        default:
-            console.log("Opcion incorrecta, vuelva a elegir");
-    }
-}while(eleccion!=3);
 
 function agregarNuevaReceta()
 {
@@ -76,6 +54,8 @@ function agregarNuevaReceta()
         nombreReceta = new Receta(idReceta, nombre, ingredientes);
     
         recetas.push(nombreReceta);
+
+        ingredientes = [];
     
         continuar = prompt("¿Desea seguir agregando recetas? (s/n)");
     
@@ -84,9 +64,11 @@ function agregarNuevaReceta()
 
 function mostrarRecetas()
 {
-    for(let i=0; i<recetas.length; i++)
+    for(let receta of recetas)
     {
-        console.log(recetas[i] + "\n");
+        console.log(receta.id + "\t");
+        console.log(receta.nombre + "\t");
+        console.log(receta.ingredientes + "\n");
     }
 }
 
