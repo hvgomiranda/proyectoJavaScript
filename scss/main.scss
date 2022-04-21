@@ -1,0 +1,48 @@
+$mainColor: rgb(227,79,59);
+$whiteColor: white;
+$titleFont: 'Kalam', cursive;
+$mainFont: 'Didact Gothic', sans-serif;
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.general
+{
+    display: grid;
+    grid-template-columns: repeat(10, 10vw);
+    grid-template-rows: repeat(10, 10vh);
+
+    background-color: $mainColor;
+
+    .header
+    {
+        grid-column: 1 / 13;
+        grid-row: 1 / 4;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        
+        h1
+        {
+            font-family: $titleFont;
+            font-size: 6rem;
+            color: $whiteColor;
+        }
+
+        input
+        {
+            border: 0px;
+            border-radius: 5px;
+            padding-left: 10px;
+            font-family: $mainFont;
+            font-size: 1.3rem;
+            width: 65vw;
+            height: 5vh;
+        }
+    }
+}

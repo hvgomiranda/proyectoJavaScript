@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.general {
+  display: grid;
+  grid-template-columns: repeat(10, 10vw);
+  grid-template-rows: repeat(10, 10vh);
+  background-color: #e34f3b; }
+  .general .header {
+    grid-column: 1 / 13;
+    grid-row: 1 / 4;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center; }
+    .general .header h1 {
+      font-family: "Kalam", cursive;
+      font-size: 6rem;
+      color: white; }
+    .general .header input {
+      border: 0px;
+      border-radius: 5px;
+      padding-left: 10px;
+      font-family: "Didact Gothic", sans-serif;
+      font-size: 1.3rem;
+      width: 65vw;
+      height: 5vh; }
