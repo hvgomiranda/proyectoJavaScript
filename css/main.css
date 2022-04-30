@@ -14,16 +14,23 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    justify-content: center; }
+    justify-content: space-evenly; }
     .general .header h1 {
       font-family: "Kalam", cursive;
       font-size: 6rem;
       color: white; }
-    .general .header input {
+    .general .header div input {
       border: 0px;
-      border-radius: 5px;
+      border-radius: 5px 0px 0px 5px;
       padding-left: 10px;
       font-family: "Didact Gothic", sans-serif;
       font-size: 1.3rem;
-      width: 65vw;
+      width: 60vw;
+      height: 5vh; }
+    .general .header div button {
+      border: 0px;
+      border-radius: 0px 5px 5px 0px;
+      font-family: "Didact Gothic", sans-serif;
+      font-size: 1.3rem;
+      width: 7vw;
       height: 5vh; }
