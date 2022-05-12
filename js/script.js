@@ -40,6 +40,19 @@ botonAgregar.onclick = function agregarNuevoIngrediente()
     }
 }
 
+botonAgregar.addEventListener("click", () =>
+{
+
+    Toastify(
+        {
+            text: "Agregado!",
+            duration: 1000,
+            grativty: "bottom",
+            position: "center"
+        }
+    ).showToast();
+})
+
 //clases
 class Receta
 {
@@ -149,10 +162,6 @@ let = new Ingrediente(33, "mejillón", 105);
 let = new Ingrediente(33, "bola de lomo", 106);
 let = new Ingrediente(33, "nalga", 106);
 let = new Ingrediente(33, "peceto", 106);
-
-
-
-console.log(listaGlobalIngredientes);
 
 
 
