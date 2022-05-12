@@ -84,6 +84,28 @@ class Tipo
     }
 }
 
+const lista = document.querySelector("#listado");
+
+fetch("../baseDeDatos/baseDeDatos.json")
+    .then(resp => resp.json())
+    .then(data => 
+        {
+            html = "";
+            data.forEach(ingrediente =>
+            {
+                html+=`
+                <li>
+                    <h4>${ingrediente.id}</h4>
+                    <p>${ingrediente.nombre}</p>
+                    <p>${ingrediente.tipo}</p>
+                </li>`
+            });
+            lista.innerHTML = html;
+        });
+
+
+
+
 //funciones para las bases de datos
 //base de datos ingredientes
 let arroz = new Ingrediente(1, "arroz", 101);

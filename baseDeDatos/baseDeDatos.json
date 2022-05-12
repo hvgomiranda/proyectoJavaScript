@@ -1,0 +1,6 @@
+[
+    {"id": 1, "nombre" : "Arroz", "tipo": "grano"},
+    {"id": 2, "nombre" : "Avena", "tipo": "grano"},
+    {"id": 3, "nombre" : "Maíz", "tipo": "grano"},
+    {"id": 4, "nombre" : "Trigo", "tipo": "grano"}
+]
