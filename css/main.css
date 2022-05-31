@@ -4,14 +4,14 @@
   box-sizing: border-box; }
 
 .general {
-  background-color: #e34f3b;
-  user-select: none; }
+  background-color: #e34f3b; }
   .general .header {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: space-evenly;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    user-select: none; }
     .general .header h1 {
       font-family: "Kalam", cursive;
       font-size: 6rem;
@@ -20,18 +20,25 @@
       display: none; }
     .general .header div button {
       border: 2px solid white;
+      text-decoration: none;
       border-radius: 5px;
       font-family: "Didact Gothic", sans-serif;
       font-size: 1.3rem;
       width: 7vw;
       height: 5vh;
       transition-duration: 0.2s; }
-    .general .header div :hover {
+      .general .header div button a {
+        text-decoration: none;
+        color: #e34f3b; }
+    .general .header div button:hover {
       background-color: #e34f3b;
       border: 2px solid white;
       color: white;
       cursor: pointer; }
+      .general .header div button:hover a {
+        color: white; }
   .general main h1 {
+    user-select: none;
     font-family: "Didact Gothic", sans-serif;
     color: white;
     font-size: 2rem;

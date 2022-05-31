@@ -13,7 +13,6 @@ $mainFont: 'Didact Gothic', sans-serif;
 .general
 {
     background-color: $mainColor;
-    user-select: none;
 
     .header
     {
@@ -22,6 +21,7 @@ $mainFont: 'Didact Gothic', sans-serif;
         align-items: center;
         justify-content:space-evenly;
         margin-bottom: 20px;
+        user-select: none;
         
         h1
         {
@@ -39,20 +39,30 @@ $mainFont: 'Didact Gothic', sans-serif;
             button
             {
                 border: 2px solid $whiteColor;
+                text-decoration: none;
                 border-radius: 5px;
                 font-family: $mainFont;
                 font-size: 1.3rem;
                 width: 7vw;
                 height: 5vh;
                 transition-duration: 0.2s;
+                a
+                {
+                    text-decoration: none;
+                    color: $mainColor;
+                }
             }
-
-            :hover
+            
+            button:hover
             {
                 background-color: $mainColor;
                 border: 2px solid $whiteColor;
                 color: $whiteColor;
                 cursor: pointer;
+                a
+                {
+                    color: $whiteColor;
+                }
             }
         }
     }
@@ -61,6 +71,7 @@ $mainFont: 'Didact Gothic', sans-serif;
     {
         h1
         {
+            user-select: none;
             font-family: $mainFont; 
             color: $whiteColor;
             font-size: 2rem;

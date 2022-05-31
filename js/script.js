@@ -1,4 +1,5 @@
 let ingredientes = [];
+let lista;
 
 //aplicar color al item seleccionado y agregarlo a una lista
 document.querySelector("ul").addEventListener("click", function(e) {
@@ -13,15 +14,11 @@ document.querySelector("ul").addEventListener("click", function(e) {
       ingredient = ingredient.querySelector("li p");
       ingredient = ingredient.innerText;
 
-      ingredientes.push(ingredient);
-      
-      console.log(ingredientes);                
+      ingredientes.push(ingredient);               
     }
   });
 
-
-
-const lista = document.querySelector("#listado");
+lista = document.querySelector("#listado");
 
 fetch("../baseDeDatos/baseDeDatos.json")
     .then(resp => resp.json())

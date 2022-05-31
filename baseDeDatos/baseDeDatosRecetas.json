@@ -1,15 +1,4 @@
 [
-    {"id": 1, "nombre": "Arroz", "tipo": "grano"},
-    {"id": 2, "nombre": "Arroz", "tipo": "grano"},
-    {"id": 3, "nombre": "Arroz", "tipo": "grano"},
-    {"id": 4, "nombre": "Arroz", "tipo": "grano"},
-    {"id": 5, "nombre": "Arroz", "tipo": "grano"},
-    {"id": 6, "nombre": "Arroz", "tipo": "grano"},
-    {"id": 7, "nombre": "Arroz", "tipo": "grano"},
-    {"id": 8, "nombre": "Arroz", "tipo": "grano"},
-    {"id": 9, "nombre": "Arroz", "tipo": "grano"},
-    {"id": 10, "nombre": "Arroz", "tipo": "grano"},
-    {"id": 11, "nombre": "Arroz", "tipo": "grano"},
-    {"id": 12, "nombre": "Arroz", "tipo": "grano"},
-    {"id": 13, "nombre": "Arroz", "tipo": "grano"}
+    {"id": 1, "nombre": "Tortilla de papa", "tipo": "salado", "ingrediente": ["papa", "cebolla", "huevo"]},
+    {"id": 2, "nombre": "Fideos con brócoli", "tipo": "salado", "ingrediente": ["fideos", "brocoli", "aceite de oliva"]}
 ]
